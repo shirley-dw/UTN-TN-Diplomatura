@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/*Variable*/
+:root{
+    --color-texto: #503618;
+    --fuente-principal: "DM Sans", sans-serif;
+}
+*{
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #503618;
+    list-style-type:none;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    font-family: var(--fuente-principal);
+    padding: 0 30px;
+    height: 70px;
+    align-items: center;
+}
+.logo-setting{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+}
+.pais{
+    width: 30px;
+}
+.navegador {
+display: flex;
+justify-content: row;
+align-items: center;
+gap: 20px;
+
+}
+.links-container{
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    gap: 20px;
+}
+.links-container .link-item .link{
+    text-decoration: none;
+    color: var(--color-texto);
+    height: 50px;
+    align-items: center;
+    list-style-type:  none;
+}
+.link-item .link-btn-link{
+    border: 2px solid var(--color-texto);
+    padding: 10px ;
+    border-radius: 5px;
+    list-style: none;
+
+}
+
