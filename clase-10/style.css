@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+.padre{
+    width: 100vw;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    
+}
+.hijo{
+    width: 100%; /*modifico a porcentaje para celulares*/
+    height: 200px;
+    background-color: grey;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.hijo:nth-child(1){
+background-color: blue;
+}
+.hijo:nth-child(2){
+background-color: blueviolet;
+}
+.hijo:nth-child(3){
+background-color: red;
+}
+@media screen and (min-width:1000px) {
+    .padre{
+        flex-direction: row;
+        }
+    }
+
