@@ -121,7 +121,7 @@ Ejemplo: Boolean (9)
  === estricta igualdad
  Ejemplo: 1 === '1' devuelve false. '1' === '1' devuelve true porque es el mismo tipo de dato. (Compara igualdad en valor y tipo de dato)
 
- != Diferencia
+ != Diferencia 
  
  !== Estricta diferencia
  <
