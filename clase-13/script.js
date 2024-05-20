@@ -82,10 +82,12 @@ if (numero > 0) { //si el numero es superior a 0 '>' es positivo
 
 /* EJERCICIO 8°
 Escribe una expresión que use el operador "&&" (and lógico) para verificar si una variable llamada "edad" es mayor o igual a 18 y si una variable llamada "tienePermiso" es "true". Si ambas condiciones se cumplen, imprime "Puedes conducir" en la consola. Si alguna de las dos condiciones no se cumple, imprime "No puedes conducir" en la consola.
-*/let = edad prompt ('Ingrese su edad')
+*/
+/* let = edad prompt('Ingrese su edad')
+
 if (edad >= 18 && tienePermiso === true) {
-    console.log("Puedes conducir");
+    console.log("Puedes conducir")
   } else {
-    console.log("No puedes conducir");
-  }
+    console.log("No puedes conducir")
+  } */
 
