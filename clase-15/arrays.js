@@ -5,7 +5,7 @@ let notaTrimestreQuinto= 6
 //Caso con arrays:
 let notasTrimestres = [9, 10, 6]
 
-console.log('el segundo trimestre te sacaste un:'+ notasTrimestre[1]) */
+console.log('el segundo trimestre te sacaste un:'+ notasTrimestre[1]) 
 /* 
 const notasTrimestre = [9, 10, 6]
 
@@ -73,7 +73,6 @@ nombres.splice(nombres.indexOf('maria'),1) */
 // Descumple keep it simple: mantenlo sencillo
 /* function eliminarNombre(a, b){
     a.splice(a.indexOf(b), 1)
-} *
+}  */
 
 
-/
