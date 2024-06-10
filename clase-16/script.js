@@ -76,7 +76,7 @@ console.log('La sumatoria de edades es ' + sumatoriaEdad)  */
 
 //PRACTICA 3° RESOLUCION PROFESOR:
 
-/* const personajes = [
+ const personajes = [
     {
         nombre: 'pepe',
         apellido: 'suarez',
@@ -101,8 +101,10 @@ for(const personaje of personajes){
     console.log(personaje)
 } // SIMPLIFICA EL FOR DE ARRIBA
 
-//FOR OF RECORRE TODO EL ARRAY. */
-/*     
+//FOR OF RECORRE TODO EL ARRAY. 
+
+/*
+    
 PRACTICA 4°: Ir al ejercicio anterior y realizarlo con FOR OF */
 
 /* const personajes = [

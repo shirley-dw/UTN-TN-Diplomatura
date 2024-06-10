@@ -281,7 +281,7 @@ console.log(historialItemHTML)
 */
 
 /* 
-# querySelectorAll: Hace lo mismo que querySelectorByClassName.
+# querySelectorAll: Hace lo mismo que querySelectorByClassName, busca todas las clases y retorna una coleccion.
 
 const historialItem = document.querySelectorAll('.productos')
 */

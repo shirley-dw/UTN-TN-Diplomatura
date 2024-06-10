@@ -124,8 +124,8 @@ Ejemplo: Boolean (9)
  != Diferencia 
  
  !== Estricta diferencia
- <
- <=
+ <  Menos que 
+ > Mayor que 18 ej
  
 
 # TYPEOF: (Me va a decir que tipo de dato es)
