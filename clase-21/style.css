@@ -1,0 +1,95 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .formLogin {
+    background-image: url(./assets/mesh-gradient.png);
+    border-radius: 1em;
+    max-width: 20em; /* Utiliza max-width para que el formulario no se desborde */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10em auto; /* Agrega auto para centrar el formulario */
+    height: 30em; /* Aumenta la altura del formulario */
+    min-height: 30em; /* Establece una altura mínima para el formulario */
+}
+  .title {
+    font-size: 1.5em; /* Ajusta el tamaño del título */
+    margin-bottom: 1em; /*Agrega un margen inferior para separar del formulario */
+    position: relative;
+    bottom: 1em;
+  }
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 1em;  Reduce el gap para que los elementos no se separen demasiado */
+  }
+  
+  .errorText {
+    display: flex;
+    align-items:center;
+    color: rebeccapurple;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .input {
+    border: 0.1em solid grey;
+    border-radius: 50em;
+    padding: 1em; /* Ajusta el padding para que los inputs no se vean demasiado pequeños */
+    margin-bottom: 0.5em; /* Agrega un margen inferior para separar los inputs */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    border: 0.1em solid grey;
+    border-radius: 50em;
+    height: 2em;
+    width: 10em;
+    background-color: rgb(137, 111, 161);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(39, 37, 37);
+    /* margin-top: Agrega un margen superior para separar el botón del formulario */
+  }
+  
+  label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    color: rgb(86, 83, 83);
+    margin-bottom: 0.5em; /* Agrega un margen inferior para separar los labels */
+  }
+  
+  /* Estilos para pantalla grande */
+  @media (min-width: 1200px) {
+    .formLogin {
+      width: 60%;
+      height: 50vh;
+      margin: 30px;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+    .title {
+      font-size: 2em;
+      position: relative;
+      bottom: -0.5em;
+
+    }
+    .input {
+      padding: 1em;
+    }
+    .btn {
+      width: 15em;
+      height: 3em;
+    }
+  }
