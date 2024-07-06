@@ -73,6 +73,7 @@ Netscape: Fue uno de los primeros navegadores que incluye un lenguaje de program
 
 # Constructores:
 * String: (dato): Transforma mi dato a string.
+Ejemplo: String(8) = "8"
 
 # Operadores aritmeticos: 
 <!-- Siempre devuelve strings  -->
@@ -98,7 +99,7 @@ Resultado: 10
 Siempre devuelve un numero por mas que halla un string. ('3') Se lo conoce como string numerico ya que devuelve un numero.
 
 
-* Multiplicación
+* Multiplicación: 
 
 / Division 
 % Resto de la division o MODULO
