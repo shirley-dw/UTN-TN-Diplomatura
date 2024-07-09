@@ -18,7 +18,7 @@ export const MensajeForm = ({submitMensaje}) => { /*  Creo un componente de Mens
                 <input className='input-mensaje' type='text' placeholder='Escribe un mensaje'/>
                 <a href="" className='icons-input'><IoCameraOutline /></a>
                 <a href="" className='icons-input'><MdAttachFile /></a>
-                <button className='btn-icons'><FaArrowRight /></button>
+                <button className='btn-send'><FaArrowRight /></button>
             </form>
         </div>
     )
