@@ -44,5 +44,7 @@ Automatizan el proceso de escritura de codigo realizando importacion y exportaci
 * Reafc importa el componente y lo exporta
 * Reafce importa el componente y lo exporta por defecto usando export default ((No utilizar hasta no ver export default))
 
+Un snippet es un fragmento de código que se puede insertar en un archivo de código fuente con solo unos pocos caracteres o una combinación de teclas. Los snippets pueden ser utilizados para insertar código comúnmente utilizado, como funciones, estructuras de control, patrones de diseño, o incluso solo para insertar comentarios o espacios en blanco.
+
 
 
