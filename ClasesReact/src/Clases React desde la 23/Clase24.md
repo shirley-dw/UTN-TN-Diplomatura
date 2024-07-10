@@ -49,7 +49,7 @@ Ejemplo de importar un componente: import Componente from './Componente';
 - Primera forma: Exporta desde el componente, solo exporta el componente que contenga el export.
 export const Boton = () => {
   USANDO EXPORT ANTES DEL COMPONENTE ESTOY EXPORTANDO EL MISMO
-}
+} 
 - Segunda forma:
 const Boton = () => {
   return (

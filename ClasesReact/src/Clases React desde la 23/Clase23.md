@@ -16,7 +16,7 @@ Pasos siguientes:
 
 # Cada vez que quiera trabajar con React.js debere seguir las indicaciones mencionadas anteriormente.
 
-# Sitio oficial de npm:
+# Sitio oficial de npm: 
 Dependencias: Cada vez que uno instale una la misma debere descargar todas las dependencias que contiene. 
 Indicando npm install en mi carpeta de react.
 # Sitio oficial de npm: https://www.npmjs.com/
