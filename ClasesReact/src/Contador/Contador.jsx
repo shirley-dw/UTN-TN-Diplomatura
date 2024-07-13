@@ -11,7 +11,7 @@ const Contador = ({ limit }) => {
         }
     };
 
-    const handleDecrementar = () => {
+    const handleDecrementar = () => { 
         if (contador != 0) {
             setContador(contador - 1)
             setAgregadoAlCarrito(false)
