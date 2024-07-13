@@ -181,6 +181,7 @@ Ejemplo:
                         <span>{contador}</span>
                         <button onClick={handleIncrementar}>+</button>
                     </>
+                  
                 )
             }
 
