@@ -1,4 +1,10 @@
-.contacto-item{
+
+.contact-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact-item{
     display: flex;
     padding: 0 5px;
     background-color: black;
@@ -9,42 +15,18 @@
     
 }
 
-.contacto-item img {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-.contacto-item .datos {
+.contact-item .dato {
     flex: 1;
     overflow: hidden;
     
 }
-.contacto-item .nombre {
+.contact-item .name {
     font-size: 16px;
     margin-bottom: 5px;
 }
-.contacto-item .preview {
-    font-size: 14px;
-    color: #e5ddd5;
-    margin-top: 0;
-    align-items: center;
-    display: flex;
-}
 
-.contacto-item .hora {
+.contact-item .time {
     margin-right: 8px;
     font-size: 12px;
     color: #e5ddd5;
-}
-
-.contacto-item .estado {
-    width: 15px;
-    height: 15px;
-    margin-right: 0.2rem;
-}
-
-.contactos-link {
-    text-decoration: none;
-    color: #fff;
 }

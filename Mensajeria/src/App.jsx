@@ -1,11 +1,8 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { ContactScreen } from '../src/Screens/ContactScreen/ContactScreen.jsx'
-import { ChatScreen } from '../src/Screens/ChatScreen/ChatScreen.jsx'
-import { InfoScreen } from '../src/Screens/InfoScreen/InfoScreen.jsx'
-
-
-
+import  ContactScreen  from './Screens/ContactScreen/ContactScreen.jsx'
+import ChatScreen  from './Screens/ChatScreen/ChatScreen.jsx'
+import InfoScreen from './Screens/InfoScreen/InfoScreen.jsx'
 
 function App() {
   return (

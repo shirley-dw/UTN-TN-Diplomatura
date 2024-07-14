@@ -1,4 +1,4 @@
-.form-busqueda {
+.form-search {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -6,7 +6,7 @@
     border-radius: 4px;
   }
   
-  .form-busqueda input {
+  .form-search input {
     width: 100%;
     padding: 0.5rem;
     border: none;

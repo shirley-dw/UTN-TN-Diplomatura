@@ -1,20 +1,17 @@
 import React from 'react';
 import './ContactoFooter.css';
-import { BsFillChatLeftTextFill, BsTelephone  } from "react-icons/bs";
-import { RiChatSmile3Line } from "react-icons/ri";
-import { GrGroup } from "react-icons/gr";
+import { BsFillChatLeftTextFill, BsTelephone  } from "react-icons/bs";/* Iconos chat y llamadas */
+import { RiChatSmile3Line } from "react-icons/ri";/* Icono novedades */
+import { LiaToolsSolid } from "react-icons/lia";/* Icono herramientas */
 
-const ContactoFooter = () => {
+export const ContactoFooter = () => {
     return (
         <div className="contact-footer">
-            <div className="accesos"><BsFillChatLeftTextFill className='icon' />Chats</div>
-            <div className="accesos"><RiChatSmile3Line className='icon'/>Novedades</div>
-            <div className="accesos"><GrGroup className='icon'/>Comunidades</div>
-            <div className="accesos"><BsTelephone className='icon'/>Llamadas</div>
-            
-            
+            <div className="access"><BsFillChatLeftTextFill className='icons' />Chats</div>
+            <div className="access"><BsTelephone className='icons'/>Llamadas</div>
+            <div className="access"><RiChatSmile3Line className='icons'/>Novedades</div>
+            <div className="access"><LiaToolsSolid className='icons'/>Herramientas</div>
         </div>
     );
 };
 
-export default ContactoFooter;

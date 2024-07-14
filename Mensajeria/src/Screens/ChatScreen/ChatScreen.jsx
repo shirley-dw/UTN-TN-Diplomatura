@@ -1,12 +1,13 @@
 import React from 'react'
-import { ChatHeaderInfo, ListaMensajes, MensajeForm } from '../../index.js' /* Importa tres componentes desde el archivo. Estos componentes se utilizarán en el componente ChatScreen */
+import { ChatHeaderInfo, ListaMensajes, MensajeForm } from '../index.js' /* Importa tres componentes desde el archivo. Estos componentes se utilizarán en el componente ChatScreen */
 import './ChatScreen.css' /* Importa el arhivo ChatScreen.css */
 import { useState } from 'react' /* Importa el hook useState de React, se utiliza para crear un estado en el componente ChatScreen */
 /* Fondo de chat */
 
 
 
-export const ChatScreen = () => { /* Define un componente  ChatScreen y lo exporta para que pueda ser utilizado en otros archivos */
+
+ const ChatScreen = () => { /* Define un componente  ChatScreen y lo exporta para que pueda ser utilizado en otros archivos */
   const MOOK_MENSAJES = [ /* Define un array de objetos que representan los mensajes de chat. Cada objeto tiene propiedades.*/
     {
         author: 'yo',
@@ -62,5 +63,5 @@ const [mensajes, setMensajes] = useState(MOOK_MENSAJES); /* Uso el hook useState
     </>
   )
 }
-
+export default ChatScreen
 /* Resumen:  El componente ChatScreen define una pantalla de chat que muestra un encabezado, una lista de mensajes y un formulario para enviar nuevos mensajes. El estado mensajes se utiliza para almacenar la lista de mensajes y se actualiza cuando se agrega un nuevo mensaje. */

@@ -1,36 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./Contacto.css";
-import './mensajeria.json'
+import React from "react"; /* importo react */
+import { Link } from "react-router-dom";/* Importo link de react dom */
+import "./Contacto.css";/* Importo css */
+import '../../../mensajeria.json'/* Importo archivo mensajeria.json */
 
-function Contacto({ contacto }) {
-  const { id, nombre, thumbnail , mensajes, ...mensaje} = contacto;
-  const imgSrc = imagenes[thumbnail];
+export const Contacto = ({ contacto }) => { /* Componente Contacto le paso props contacto */
+  const { id, nombre, thumbnail , mensajes} = contacto/* Desestructuro la props contacto */
+  const imgSrc = imagenes[thumbnail] /* Variable imgSrc con valor de imagenes[thumbnail] definida en Contactos */
 
 
     
-    const lastMessage = mensajes[mensajes.length - 1];
-    const horaUltimoMensasje = lastMessage?.hora;
-    const statusUltimoMensasje = lastMessage?.estado;
+    const lastMessage = mensajes[mensajes.length - 1] /* Ultimo mensaje en el array mensajes */
+    const horaUltimoMensaje = lastMessage?.hora/* Hora del ultimo mensaje */
 
-  return (
-    <Link className="contactos-link" to={`/mensajes/${id}`}>
-    <div key={id} className="contacto-item">
+  return (/* Declaración de retorno, devuelve elementos JSX. */
+    <Link className="contact-link" to={`/mensaje/${id}`}>
+    <div key={id} className="contact-item">{/* Link react-router-dom crea un enlace que lleva a una ruta específicada con to la URL a la que debe dirigir el enlace en él que concatena la cadena /mensaje/con el valor de la variable. */}
       <img src={imgSrc} alt={nombre} />
-      <div className="datos">
-        <p className="nombre">
+      <div className="dato">
+        <p className="name">
           <strong>{nombre}</strong>
         </p>
-       <p className="preview"> <img 
-          className="estado" 
-          src={statusUltimoMensasje=== 'visto' ? imagenes.visto : statusUltimoMensasje === 'entregado' ? imagenes.entregado : imagenes.noEntregado} 
-          alt={statusUltimoMensasje}
-        />{lastMessage?.texto}</p>
-      </div>
-      <div className="hora">{horaUltimoMensasje}</div>
+        </div>
+      <div className="time">{horaUltimoMensaje}</div>
     </div>
     </Link>
-  );
+  )
 }
-
-export {Contacto}

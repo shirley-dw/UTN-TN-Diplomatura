@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Contacto } from "../../Contactos/Contacto/Contacto.jsx";
 import "./ListaContactos.css";
+import ObtenerContactos from '../../../Fetching/contactos.fetching.js'
 
-function ListaContactos({ search }) {
+export const ListaContactos = ({ search }) => {
   const [contactos, setContactos] = useState([]);
   const [contactosFiltrados, setContactosFiltrados] = useState([]);
 
   useEffect(() => {
-    obtenerContactos()
-      .then((contactos) => {
-        console.log("contactos", contactos);
+    ObtenerContactos()
+     .then((contactos) => {
         setContactos(contactos);
       })
-      .catch((error) => {
+     .catch((error) => {
         console.error("Error al obtener contactos:", error);
       });
   }, []);
@@ -37,5 +37,3 @@ function ListaContactos({ search }) {
     </div>
   );
 }
-
-export default ListaContactos;

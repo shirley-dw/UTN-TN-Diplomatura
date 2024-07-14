@@ -7,17 +7,7 @@
     justify-content: space-between;
 }
 
-.contact-footer .iconos {
-    display: flex;
-    align-items: center;
-}
-
-.contact-footer .logo{
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.contact-footer .accesos {
+.contact-footer .access {
     margin-right: 5px;
     font-size: 12px;
     color: #e5ddd5;
@@ -26,7 +16,7 @@
     align-items: center;
 }
 
-.contact-footer .accesos .icon {
+.contact-footer .accesos .icons {
     margin-bottom: 5px;
     font-size: 18px;
 }

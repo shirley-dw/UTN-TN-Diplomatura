@@ -1,11 +1,13 @@
 import React from 'react'
 import './InfoScreen.css'
-import ContactoInfo from '../../Components/Contactos/ContactoInfo/ContactoInfo.jsx';
+import  ContactScreen from '../ContactScreen/ContactScreen.jsx';
 
-const ContactoInfo = () =>{
+const InfoScreen = () =>{ /* Define componente InfoScreen que devuelve un elemento JSX*/
   return(
-    <div className="InfoScreen">
-      <ContactoInfo />
+    <div className="InfoScreen">{/* Devuelve el elemento JSX que se renderiza en la pantalla */}
+      <ContactScreen />{/* Instancia el componente ContactScreen */}
     </div>
   )
 }
+
+export default InfoScreen

@@ -5,7 +5,7 @@ import { IoMdSearch } from 'react-icons/io';
 import './ContactoHeader.css';
 import FormBusquedaDeContactos from '../FormBusquedaDeContactos/ContactoForm';
 
-const ContactoHeader = ({ search, onSearchChange }) => {
+export const ContactoHeader = ({ search, onSearchChange }) => {
   const [searchVisible, setSearchVisible] = useState(false);
 
   const handleSearchClick = () => {
@@ -21,13 +21,12 @@ const ContactoHeader = ({ search, onSearchChange }) => {
         />
       )}
       <div className='logo'>WhatsApp</div>
-      <div className='iconos'>
+      <div className='icons'>
         <CiCamera />
         <IoMdSearch onClick={handleSearchClick} />  
         <BsThreeDotsVertical />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default { ContactoHeader}

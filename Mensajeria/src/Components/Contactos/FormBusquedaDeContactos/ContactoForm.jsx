@@ -13,7 +13,7 @@ function FormBusquedaDeContactos({ search, onSearchChange }) {
   return (
     <>
 
-    <form className="form-busqueda">
+    <form className="form-search">
       <input
         type="text"
         placeholder="Buscar..."
