@@ -1,6 +1,5 @@
-import { Mensaje } from './Chat/Mensaje/Mensaje.jsx'
-import { ListaMensajes } from './Chat/ListaMensajes/ListaMensajes.jsx'
-import { MensajeForm } from './Chat/MensajeForm/MensajeForm.jsx'
-import { ChatHeaderInfo } from './Chat/ChatHeaderInfo/ChatHeaderInfo.jsx'
+import ChatScreen from "../src/Screens/ChatScreen/ChatScreen.jsx"
+import ContactScreen from "../src/Screens/ContactScreen/ContactScreen.jsx";
+import InfoScreen from "../src/Screens/InfoScreen/InfoScreen.jsx";
 
-export { Mensaje, ListaMensajes, MensajeForm, ChatHeaderInfo }
+export { ChatScreen, ContactScreen, InfoScreen }

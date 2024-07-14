@@ -61,12 +61,35 @@ El BOM no está estandarizado y afecta a la programación del lado del cliente, 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 # Pasos para instalar libreria React-router-dom:
- React Router DOM es una librería que permite agregar enrutamiento a una aplicación web de React. 
- Algunas ventajas de usar React Router DOM son: Permite una navegación fluida en una aplicación de una sola página (SPA)
+React Router DOM es una librería que permite agregar enrutamiento a una aplicación web de React. 
+Algunas ventajas de usar React Router DOM son: Permite una navegación fluida en una aplicación de una sola página (SPA)
+
+* Pasos para instalar la libreria react-router-dom:
+
 - npm install react-router-dom en la terminal.
 - Una vez instalado hay que empezar a enrutar las paginas.
 - Se enrutan las paginas dentro de la carpeta Pages, dentro de ella estan sus subCarpetas como Home y dentro de ella el archivo Home.jsx
   Products/Product.jsx la carpeta Pages vendria a ser como los Components.
+
+# Resumen Routes: Secciona la pagina para que sea mas legible y accesible 
+
+1) Creo carpeta Pages dentro creo las carpetas:
+· Home
+· Detail
+· Cart
+· Contact
+· Products
+
+2) Dentro de cada carpeta cre sus archivos correspondientes:
+· Home.jsx
+· Detail.jsx
+· Cart.jsx
+· Contact.jsx
+· Products.jsx
+3) Luego cada pagina tendra sus secciones (DOS OPCIONES):
+· Hacerlo dentro de "Components" una carpeta "Sections"(Para sitiosW mas grandes)
+· Hacer una carpeta "Sections" dentro de cada carpeta.
+· Tener una carpeta aparte llamada "Sections".
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -75,12 +98,8 @@ Se refiere a una forma de desarrollo web en la que la página web está contenid
 De esta forma, se carga todo en HTML y, mientras naveguemos por la página, irá solicitando el contenido al servidor via ajax.
 * AJAX permite a las aplicaciones web validar información específica en formularios antes de que los usuarios los envíen.
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------
-# NavLink: Components
 
-<NavLink/>es un componente de React Router, una biblioteca popular para manejar rutas en aplicaciones de React.
-<NavLink/>es una variante del componente <Link/>que proporciona una forma de crear enlaces que se activan cuando la ruta actual coincide con la ruta especificada en el enlace.
-
-Cuando se utiliza <NavLink/>, se puede especificar una ruta y un estilo para cuando el enlace esté activo (es decir, cuando la ruta actual coincida con la ruta especificada). De esta forma, se puede crear una navegación más interactiva y visualmente atractiva en la aplicación.
-
-# Utilizo NavLink
+# Rafce: EXPORTA POR DEFAULT
+Es una forma de decirle a React que se actualice la interfaz de usuario e importe los componentes.
