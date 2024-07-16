@@ -1,13 +1,7 @@
 
 /* Style formulario de mensajes */
 
-.form-header{
-    width: 60vw;
-    height: 15%;
-    bottom: -42%;
-    left: -10px;
-    position: fixed;
-}
+
 form{
     display: flex;
     justify-content: center;

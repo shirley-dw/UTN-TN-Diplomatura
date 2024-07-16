@@ -1,4 +1,21 @@
-.fondo{
-    width: 100vw;
+.container-msj {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
     height: 100vh;
-}
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;  
+    height: 8px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;  
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;  
+    border-radius: 10px;    
+    border: 2px solid transparent; 
+  }

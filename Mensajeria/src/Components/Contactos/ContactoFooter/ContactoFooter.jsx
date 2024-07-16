@@ -15,3 +15,4 @@ export const ContactoFooter = () => {
     );
 };
 
+export default ContactoFooter;

@@ -1,38 +1,49 @@
-import React from'react'
-import './ChatHeaderInfo.css'
-/* Background img chat */
-/* Pantalla de celular */
 
-/* Import imagen de perfil */
-import profile from '../../Components/assets/profile.jpg' /* Dos punto + barra va una carpeta atras */
-/* Iconos importados de libreria React-icons */
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { Link } from 'react-router-dom'
+import './ChatHeaderInfo.css'
+/* Import imagenes */
+/* import {Imagenes} from '../../../public/Imagenes'; */
+/* Importo contactos */
+import { ObtenerContactos } from "../../Fetching/contactosFetching";
+/* icons importados de libreria React-icons */
 import { SlArrowLeft } from "react-icons/sl";
 import { GoDeviceCameraVideo } from "react-icons/go";
 import { MdPhone } from "react-icons/md";
 import { IoMenu } from "react-icons/io5";
+import { Imagenes } from '../../../public/Imagenes';
 
 /*  Define un componente llamado ChatHeaderInfo y lo exporta para ser usado en otros archivos.
  El componente devuelve un elemento div con la clase chat-header-info,(Contiene el encabezado de la pantalla de chat */
-const ChatHeaderInfo = () => {  
-    return (
+const ChatHeaderInfo = () => {
+  const { contactoID } = useParams();
+  const [contactos, setContactos] = useState([]);
 
-            <div className="chat-header-info">
-            <div className= 'chat-header'>
-            <a href="" className='back-header'><SlArrowLeft /></a>
-            <img src={profile} alt="profile"  className='profile'/>
-        <div>
-        <h1 className='profile-name'>Gatito</h1>
-        <p className='status-text'>En línea</p>
-        </div>
-        </div>
-        <div className='chat-header-icons'>
-          <a href="" className='icons'><GoDeviceCameraVideo /></a>
-          <a href="" className='icons'><MdPhone /></a>
-          <a href="" className='icons'><IoMenu /></a>
-            </div>
-        </div>
+  useEffect(() => {
+    ObtenerContactos()
+      .then((contactos) => {
+        setContactos(contactos);
+      });
+  }, []);
 
-    )
+  const contacto = contactos.find((contacto) => contacto.id === Number(contactoID));
+  const imgSrc = Imagenes[contacto.thumbnail];
+
+  return (
+    <div className="chat-header-info">
+      <div className="contacto"><Link to="/contactos"><SlArrowLeft className="arrow" /></Link>
+        <img src={imgSrc} />
+        <div className="chat-header">
+          <div className="profile-name">{contacto.nombre}</div>
+          <div className="status-text">Online</div>
+        </div></div>
+      <div className="icons">
+        <GoDeviceCameraVideo />
+        <MdPhone /><IoMenu />
+      </div>
+    </div>
+  )
 }
 
 export default ChatHeaderInfo

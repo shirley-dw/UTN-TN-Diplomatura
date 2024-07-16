@@ -5,17 +5,21 @@ import { IoMdSearch } from 'react-icons/io'/* Import icons */
 import './ContactoHeader.css';/* Import css */
 import FormBusquedaDeContactos from '../FormBusquedaDeContactos/ContactoForm.jsx'; /* Importo form de busqueda */
 
-export const ContactoHeader = ({ search, onSearchChange }) => {/*  Function contacto Header con prop "Search y onSearchChange" */
+
+/*  Function contactoHeader con props "Search y onSearchChange" */
+const ContactoHeader = ({ search, onSearchChange }) => {
   const [searchVisible, setSearchVisible] = useState(false);/* Inicio estado en false */
 
-  const handleSearchClick = () => {/* Function handleSearchClick */
+  /* Function handleSearchClick */
+  const handleSearchClick = () => {
     setSearchVisible(!searchVisible) /* La instacion y digo que cuando sea diferente se ejecute */
   }
 
-  return ( /* Return elementos JSX */
-    <div className={`contact-header ${searchVisible ? 'search-visible' : ''}`}>{/* Operador ternario */}
+  return ( 
+    <div className={`contact-header ${searchVisible ? 'search-visible' : ''}`}>{/*  Si el estado es true, se ejecuta la clase search-visible */}
       {searchVisible && (
-        <FormBusquedaDeContactos /* Paso las props a FormBusquedaDeContactos */
+        /* Paso las props a FormBusquedaDeContactos */
+        <FormBusquedaDeContactos 
           search={search}
           onSearchChange={onSearchChange}
         />
@@ -30,3 +34,4 @@ export const ContactoHeader = ({ search, onSearchChange }) => {/*  Function cont
   )
 }
 
+export default ContactoHeader

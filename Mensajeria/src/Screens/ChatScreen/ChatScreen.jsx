@@ -1,69 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import { ChatHeaderInfo, ListaMensajes, MensajeForm } from '../index.js';
-import './ChatScreen.css';
-import Pantalla from '../../Components/assets/pantalla.png';
-import { useParams } from 'react-router-dom';
+import React, { useState } from "react";
+import { ChatHeaderInfo, ListaMensajes, MensajeForm } from '../index.js' /* Importa tres componentes desde el archivo */
+import './ChatScreen.css' /* Importa el arhivo ChatScreen.css */
 
-const ChatScreen = () => {
-  const [mensajes, setMensajes] = useState([]);
-  const [mensajesFiltrados, setMensajesFiltrados] = useState([]);
-  const { mensajesID } = useParams();
+const ChatScreen = (contactoID) => {
+    const [mensajes, setMensajes] = useState([]); /* Estado inicial de los mensajes*/
 
-  const obtenerMensajes = async () => {
-    try {
-      const response = await fetch('/mensajeria.json'); 
-      const mensajes = await response.json();
-      setMensajes(mensajes);
-    } catch (error) {
-      console.error("Error al obtener mensajes:", error);
+    /* Define una función addMensaje que se usa para agregar un nuevo mensaje al estado mensajes. La función toma un parámetro mensajeNuevo que es el texto del nuevo mensaje. La función utiliza la función setMensajes para actualizar el estado mensajes agregando un nuevo objeto que representa el nuevo mensaje. */
+    const addMensaje = (mensajeNuevo) => {
+        const msjNuevo = {
+            author: 'yo',
+            text: mensajeNuevo,
+            estado: 'visto',
+            day: 'hoy',
+            hour: '11:18',
+            id: mensajes.length + 1
+        }
+        setMensajes([...mensajes, msjNuevo]);
     }
-  };
-
-  useEffect(() => {
-    obtenerMensajes();
-  }, [mensajesID]);
-
-  useEffect(() => {
-    if (search) {
-      setMensajesFiltrados(
-        mensajes.filter((mensaje) =>
-          mensaje.nombre?.toLowerCase().includes(search.toLowerCase())
-        )
-      );
-    } else {
-      setMensajesFiltrados(mensajes);
-    }
-  }, [mensajes, search]);
-
-  const addMensaje = (mensajeNuevo) => {
-    setMensajes([...mensajes, {
-      author: 'yo',
-      text: mensajeNuevo,
-      estado: 'visto',
-      day: 'hoy',
-      hour: '11:18',
-      id: mensajes.length + 1
-    }]);
-  };
-
-  return (
-    <>
-      <ChatHeaderInfo />
-      <div>
-        <img src={Pantalla} alt="" className='pantalla' />
-        <div className='chat'>
-          <div className='ChatScreen'>
-            <ListaMensajes lista={mensajesFiltrados} />
-          </div>
-          <MensajeForm submitMensaje={addMensaje} />
-          <div>
-
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default ChatScreen;
+    return (
+        <>
+            <ChatHeaderInfo />
+            <div>
+                {/* <img src={Pantalla} alt="" className='pantalla' /> */}
+                <div className='chat'> {/* Se utiliza para mostrar constel encabezado de la pantalla de chat */}
+                    <div className='ChatScreen'>
+                        <ListaMensajes contactoID={contactoID} mensaje={mensajes[mensajes.length - 1]}  />
+                    </div>
+                    <MensajeForm submitMensaje={addMensaje} /> 
+                </div>
+            </div>
+        </>
+    )
+}
+export default ChatScreen
 /* Resumen:  El componente ChatScreen define una pantalla de chat que muestra un encabezado, una lista de mensajes y un formulario para enviar nuevos mensajes. El estado mensajes se utiliza para almacenar la lista de mensajes y se actualiza cuando se agrega un nuevo mensaje. */
+

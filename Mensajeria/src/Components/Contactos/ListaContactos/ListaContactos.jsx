@@ -1,33 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom'
 import { Contacto } from "../../Contactos/Contacto/Contacto.jsx";
 import "./ListaContactos.css"
 import {ObtenerContactos }from '../../../Fetching/contactosFetching.js'
-import {ObtenerMensajes} from '../../../Fetching/mensajesFetching.js'
 
-export const ListaContactos = ({ search }) => {
+
+ const ListaContactos = ({ search }) => {
   const [contactos, setContactos] = useState([]);
-  const [mensajes, setMensajes] = useState([]); 
-  const { contactoID } = useParams([]);
   const [contactosFiltrados, setContactosFiltrados] = useState([]);
 
   useEffect(() => {
     ObtenerContactos()
      .then((contactos) => {
+      console.log("contactos", contactos)
         setContactos(contactos);
       })
      .catch((error) => {
         console.error("Error al obtener contactos:", error);
-      });
-  }, [contactoID]);
-
-  useEffect(() => {
-    ObtenerMensajes() 
-     .then((mensajes) => {
-        setMensajes(mensajes); 
-      })
-     .catch((error) => {
-        console.error("Error al obtener mensajes:", error);
       });
   }, []);
 
@@ -46,11 +34,13 @@ export const ListaContactos = ({ search }) => {
   return (
     <div className="contact-list">
       {contactosFiltrados.map((contacto) => (
-        <Contacto key={contacto.ID} contacto={contacto} mensajes={mensajes} /> // Pass the messages as a prop
+        <Contacto key={contacto.ID} contacto={contacto} mensajes={mensajes} /> 
       ))}
     </div>
   );
 };
+ export default ListaContactos
+
 
 
 /* 

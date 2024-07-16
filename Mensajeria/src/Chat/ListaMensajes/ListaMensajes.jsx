@@ -1,33 +1,46 @@
+/* Importo REACT/ UseEffect/ Router-dom/ CSS/ UseState */
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import  Mensaje  from "../Mensaje/Mensajes.jsx";
-import './ListaMensajes.css';
-import {ObtenerMensajes} from '../../Fetching/mensajesFetching.js'
+import  Mensajes  from '../Mensaje/Mensajes.jsx'
+import './ListaMensajes.css'
+
+/* Define un componente de React llamado ListaMensajes y lo exporta, define la props mensaje */
 
 const ListaMensajes = ({ mensaje }) => {
-  const { mensajeID} = useParams();
-  const [mensajesIniciales, setMensajesIniciales] = useState([]);
-
-  // Carga mensajes almacenados en el JSON
+  const { contactoID } = useParams()
+  const [mensajeInicial, setMensajeInicial] = useState([])
+  const [contacto, setContacto] = useState();
+  // Msj del json
   useEffect(() => {
-    const contacto = ObtenerMensajes.find(contacto => contacto.id === parseInt(contactoID));
-      setMensajesIniciales(contacto.mensajes);
-  }, []);
+    fetch("/mensajeria.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const contactoEncontrado = data.find(
+          (contacto) => contacto.id === Number(contactoID)
+        );
+        if (contactoEncontrado) {
+          setContacto(contactoEncontrado);
+          setMensajeInicial(contactoEncontrado.mensajes);
+        }
+      });
+  }, [contactoID]);
 
-  // Agrega el mensaje nuevo
+  // New mensaje
   useEffect(() => {
     if (mensaje) {
-      setMensajesIniciales(mensajesPrevios => [...mensajesPrevios, mensaje]);
+      setMensajeInicial((mensajesPrevios) => [...mensajesPrevios, mensaje]);
     }
-  }, [mensajeID]);
+  }, [mensaje]);
 
+/* La lista se crea utilizando el método map del array lista, que itera sobre cada elemento del array y devuelve un nuevo elemento Mensaje para cada uno */
   return (
-    <div className="mensaje-container">
-      {mensajesIniciales.map((msj, index) => (
-        <Mensaje mensaje={msj} key={`${contactoID}.${msj.id}.${index}`} />
-      ))}
-    </div>
-  );
+    <div className="container-msj">
+      {mensajeInicial.map((mensaje, index) => (
+         <Mensajes mensaje={mensaje} key={`${contactoID}.${mensaje.id}.${index}`}/>
+        ))}
+        </div>
+)
 }
-
 export default ListaMensajes;
+
+
