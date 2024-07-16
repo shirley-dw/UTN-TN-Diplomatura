@@ -1,7 +1,6 @@
 import React from'react'
 import './ChatHeaderInfo.css'
 /* Background img chat */
-import '../../Components/assets/fondo.jpg'
 /* Pantalla de celular */
 
 /* Import imagen de perfil */
@@ -16,12 +15,13 @@ import { IoMenu } from "react-icons/io5";
  El componente devuelve un elemento div con la clase chat-header-info,(Contiene el encabezado de la pantalla de chat */
 const ChatHeaderInfo = () => {  
     return (
+
             <div className="chat-header-info">
             <div className= 'chat-header'>
             <a href="" className='back-header'><SlArrowLeft /></a>
             <img src={profile} alt="profile"  className='profile'/>
         <div>
-        <h1 className='profile-name'>Jimmy</h1>
+        <h1 className='profile-name'>Gatito</h1>
         <p className='status-text'>En línea</p>
         </div>
         </div>

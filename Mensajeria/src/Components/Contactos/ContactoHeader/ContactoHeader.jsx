@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { CiCamera } from 'react-icons/ci';
-import { BsThreeDotsVertical } from 'react-icons/bs';
-import { IoMdSearch } from 'react-icons/io';
-import './ContactoHeader.css';
-import FormBusquedaDeContactos from '../FormBusquedaDeContactos/ContactoForm';
+import React, { useState } from 'react'/* Importo react + useState */
+import { CiCamera } from 'react-icons/ci'/* Importo icono camara */
+import { BsThreeDotsVertical } from 'react-icons/bs'/* Import icons */
+import { IoMdSearch } from 'react-icons/io'/* Import icons */
+import './ContactoHeader.css';/* Import css */
+import FormBusquedaDeContactos from '../FormBusquedaDeContactos/ContactoForm.jsx'; /* Importo form de busqueda */
 
-export const ContactoHeader = ({ search, onSearchChange }) => {
-  const [searchVisible, setSearchVisible] = useState(false);
+export const ContactoHeader = ({ search, onSearchChange }) => {/*  Function contacto Header con prop "Search y onSearchChange" */
+  const [searchVisible, setSearchVisible] = useState(false);/* Inicio estado en false */
 
-  const handleSearchClick = () => {
-    setSearchVisible(!searchVisible);  
-  };
+  const handleSearchClick = () => {/* Function handleSearchClick */
+    setSearchVisible(!searchVisible) /* La instacion y digo que cuando sea diferente se ejecute */
+  }
 
-  return (
-    <div className={`contact-header ${searchVisible ? 'search-visible' : ''}`}>
+  return ( /* Return elementos JSX */
+    <div className={`contact-header ${searchVisible ? 'search-visible' : ''}`}>{/* Operador ternario */}
       {searchVisible && (
-        <FormBusquedaDeContactos
+        <FormBusquedaDeContactos /* Paso las props a FormBusquedaDeContactos */
           search={search}
           onSearchChange={onSearchChange}
         />

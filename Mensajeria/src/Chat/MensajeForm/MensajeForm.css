@@ -2,7 +2,7 @@
 /* Style formulario de mensajes */
 
 .form-header{
-    width: 55vw;
+    width: 60vw;
     height: 15%;
     bottom: -42%;
     left: -10px;
@@ -22,7 +22,7 @@ form{
     padding: 5px;
     border: 2px rgba(0, 0, 0, 0.596);
     box-shadow: 0 0 3px 1px #00000067;
-    width: 20vw;
+    width: 35vw;
     position: fixed;
     bottom: 80px;
     left: 15px;
@@ -37,15 +37,14 @@ form{
     background-color: #062e27;
     border: 2px  rgba(0, 0, 0, 0.596); 
     color: white;
-    
     border: 3px solid red;
+   
 }
 .icons-input{
     border: 3px solid red;
     width: 30px;
     height: 30px;
     color: #062e27;
-   
-   
+    position: fixed;
     transform: translateY(-50%); /* Centra verticalmente */
 }
