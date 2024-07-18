@@ -4,7 +4,7 @@ import './ContactScreen.css'
 import { ContactoHeader } from '../../Components/Contactos/ContactoHeader/ContactoHeader.jsx'
 import { ListaContactos } from '../../Components/Contactos/ListaContactos/ListaContactos.jsx'
 import { ContactoFooter } from '../../Components/Contactos/ContactoFooter/ContactoFooter.jsx'
-import '../../Components/assets/fondo.jpg'
+
 
 
 

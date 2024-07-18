@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import './ChatHeaderInfo.css';
 /* Import imagenes */
-/* import {Imagenes} from '../../../public/Imagenes'; */
+/* import {Imagenes} from '/Imagenes'; */
 /* Importo contactos */
 import { ObtenerContactos } from "../../Fetching/contactosFetching";
 /* icons importados de libreria React-icons */
@@ -19,6 +19,7 @@ const ChatHeaderInfo = () => {
   const { id } = useParams();
   const [contactos, setContactos] = useState([]);
   const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
     ObtenerContactos()

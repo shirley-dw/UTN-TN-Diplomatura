@@ -1,7 +1,7 @@
 /* Importo React / useParams / Mensajeria.json / CSS e Imagenes */
 import React from 'react';
 import './Mensajes.css'
-/* import  { imagenes } from '../../../public/Imagenes' */
+/* import  { Imagenes } from '/Imagenes'  */
 
 
 const Mensajes = ({ mensaje, contacto }) => {
