@@ -7,7 +7,7 @@ import './ListaMensajes.css'
 /* Define un componente de React llamado ListaMensajes y lo exporta, define la props mensaje */
 
 const ListaMensajes = ({ mensaje }) => {
-  const { contactoID } = useParams()
+  const { id } = useParams()
   const [mensajeInicial, setMensajeInicial] = useState([])
   const [contacto, setContacto] = useState();
   // Msj del json
@@ -16,14 +16,14 @@ const ListaMensajes = ({ mensaje }) => {
       .then((response) => response.json())
       .then((data) => {
         const contactoEncontrado = data.find(
-          (contacto) => contacto.id === Number(contactoID)
+          (contacto) => contacto.id === Number(id)
         );
         if (contactoEncontrado) {
           setContacto(contactoEncontrado);
           setMensajeInicial(contactoEncontrado.mensajes);
         }
       });
-  }, [contactoID]);
+  }, [id]);
 
   // New mensaje
   useEffect(() => {
@@ -36,7 +36,7 @@ const ListaMensajes = ({ mensaje }) => {
   return (
     <div className="container-msj">
       {mensajeInicial.map((mensaje, index) => (
-         <Mensajes mensaje={mensaje} key={`${contactoID}.${mensaje.id}.${index}`}/>
+         <Mensajes mensaje={mensaje} key={`${id}.${mensaje.id}.${index}`}/>
         ))}
         </div>
 )

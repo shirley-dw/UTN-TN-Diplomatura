@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Contacto } from "../../Contactos/Contacto/Contacto.jsx";
+import  Contacto  from "../../Contactos/Contacto/Contacto.jsx";
 import "./ListaContactos.css"
-import {ObtenerContactos }from '../../../Fetching/contactosFetching.js'
+import { ObtenerContactos }from '../../../Fetching/contactosFetching.js'
 
 
  const ListaContactos = ({ search }) => {
@@ -33,13 +33,21 @@ import {ObtenerContactos }from '../../../Fetching/contactosFetching.js'
 
   return (
     <div className="contact-list">
-      {contactosFiltrados.map((contacto) => (
-        <Contacto key={contacto.ID} contacto={contacto} mensajes={mensajes} /> 
+      {contactosFiltrados.map(({id, nombre, thumbnail, mensajes }) => (
+        <Contacto
+          key={id}
+          nombre={nombre}
+          thumbnail={thumbnail}
+          mensajes={mensajes}
+        />
       ))}
+  
     </div>
   );
-};
- export default ListaContactos
+}
+export default ListaContactos;
+
+
 
 
 
@@ -53,6 +61,6 @@ import {ObtenerContactos }from '../../../Fetching/contactosFetching.js'
 
 contacto.nombre?.toLowerCase().includes(search.toLowerCase()): Es la condicion de filtrado verifica si el nombre del contacto (conv' a minusc') contiene la cadena de busqueda search (conv' a minusc'). El operador ?. se usa para evitar errores de tipo "null" en caso de que el contacto no tenga un nombre.
 
-
+setContactosFiltrados(contactos): Actualiza el estado contactosFiltrados con la lista de contactos filtrada.
 
 */

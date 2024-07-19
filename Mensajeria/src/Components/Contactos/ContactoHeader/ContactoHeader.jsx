@@ -19,7 +19,7 @@ const ContactoHeader = ({ search, onSearchChange }) => {
     <div className={`contact-header ${searchVisible ? 'search-visible' : ''}`}>{/*  Si el estado es true, se ejecuta la clase search-visible */}
       {searchVisible && (
         /* Paso las props a FormBusquedaDeContactos */
-        <FormBusquedaDeContactos 
+        <FormBusquedaDeContactos
           search={search}
           onSearchChange={onSearchChange}
         />

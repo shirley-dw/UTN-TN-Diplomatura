@@ -17,14 +17,16 @@ import { IoMenu } from "react-icons/io5";
 
 const ChatHeaderInfo = () => {
   const { id } = useParams();
-  const [contactos, setContactos] = useState([]);
+  const [contacto, setContacto] = useState(null);
   const [loading, setLoading] = useState(true);
   
-
+  
   useEffect(() => {
     ObtenerContactos()
-      .then((contactos) => {
-        setContactos(contactos);
+    .then((contactos) => {
+      console.log(contactos)
+      const dataContacto = contactos.find((contacto) => contacto.id === Number(id));
+      setContacto(dataContacto);
         setLoading(false);
       })
       .catch((error) => {
@@ -33,7 +35,6 @@ const ChatHeaderInfo = () => {
       });
   }, []);
 
-  const dataContacto = contactos.find((contacto) => contacto.id === Number(id));
 
   if (loading) {
    console.log('Cargando')
@@ -46,12 +47,15 @@ const ChatHeaderInfo = () => {
       <div className="contacto">
         <Link to="/">
           <SlArrowLeft className="arrow" />
-        </Link>
-        <img className="fotoperfil" src={'/Imagenes/'+ dataContacto.thumbnail} alt="Foto perfil" />
+        </Link>{
+        contacto && <>
+        <img className="fotoperfil" src={'/Imagenes/'+ contacto.thumbnail} alt="Foto perfil" />
         <div className="chat-header">
-          <div className="profile-name">{dataContacto.nombre}</div>
-          <div className="status-text">{dataContacto.ultima_conexion}</div>
+          <div className="profile-name">{contacto.nombre}</div>
+          <div className="status-text">{contacto.ultima_conexion}</div>
         </div>
+        </>
+        }
       </div>
       <div className="icons">
         <GoDeviceCameraVideo />
