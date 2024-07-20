@@ -2,8 +2,7 @@
 
 /* Variables de Navegador Chat */
 :root{
-    --ColorNav: #00826A;
-    --FontColor: #ffffff;
+    --ColorNav: #111B21;
     --PrimaryFont: font-family:"Lato", sans-serif ;
 }
 
@@ -17,11 +16,15 @@
 .chat-header-info {
     display: flex;
     align-items: center;
-    background-color: #075e54;
+    background-color: var(--ColorNav);
     color: white;
     padding: 15px;
     width: 100%;
     justify-content: space-between; 
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    transition: all 0.3s ease;
 }
 
 .chat-header img {
@@ -45,15 +48,17 @@
     color: #e5ddd5;
 }
 
-.chat-header .iconos {
+.chat-header .icons {
     display: flex;
     align-items: center;
+    gap: 30px;
+    width: 40px;
 }
 
 
 .iconos svg {
     margin-right: 20px; 
-    font-size: 25px;
+    font-size: 100px;
     color: #e5ddd5; 
 }
 
@@ -69,7 +74,7 @@
     font-weight: 900;
 }
 
-/* solo le agregue esto */
+
 
 .fotoperfil{
     height: 30px;

@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import './ChatHeaderInfo.css';
-/* Import imagenes */
-/* import {Imagenes} from '/Imagenes'; */
-/* Importo contactos */
+
 import { ObtenerContactos } from "../../Fetching/contactosFetching";
 /* icons importados de libreria React-icons */
 import { SlArrowLeft } from "react-icons/sl";

@@ -4,6 +4,7 @@ import "./ListaContactos.css"
 import { ObtenerContactos }from '../../../Fetching/contactosFetching.js'
 
 
+
  const ListaContactos = ({ search }) => {
   const [contactos, setContactos] = useState([]);
   const [contactosFiltrados, setContactosFiltrados] = useState([]);
@@ -35,6 +36,7 @@ import { ObtenerContactos }from '../../../Fetching/contactosFetching.js'
     <div className="contact-list">
       {contactosFiltrados.map(({id, nombre, thumbnail, mensajes }) => (
         <Contacto
+          id = {id}
           key={id}
           nombre={nombre}
           thumbnail={thumbnail}

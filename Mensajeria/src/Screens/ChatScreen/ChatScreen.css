@@ -1,14 +1,9 @@
 .chat {
-    width: 38vw;
-    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: star;
     overflow-y: scroll;
-    padding: 5px;
-    margin-top: -2px;
-    margin-left: 7px;
-    background-image: url(../Components/assets/fondo.jpg);
+    background-color: #202c33;
   }
 
 .ChatScreen {
@@ -22,7 +17,6 @@
 }
 
 .chat::-webkit-scrollbar-track {
-    background: #124a32;
     border-radius: 10px;
 }
 
@@ -31,17 +25,9 @@
 }
 
 .chat::-webkit-scrollbar-thumb:hover {
-    background: #8dc591;
+    background: #111B21;
 }
-.pantalla{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 94vh;
-    position: absolute;
-    top: -5px ;
-    
-}
+
 
 
 

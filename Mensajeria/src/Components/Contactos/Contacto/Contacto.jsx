@@ -5,9 +5,9 @@ import "./Contacto.css";
 
 
 /* Componente Contacto le paso props contacto */
-export const Contacto = ({ contacto }) => {
+export const Contacto = ({ id, nombre, thumbnail, mensajes }) => {
   /* Desestructuro la props contacto */
-  const { id, nombre, thumbnail, mensajes } = contacto
+  /* const { id, nombre, thumbnail, mensajes } = contacto */
   const imagenes = '/Imagenes/' + thumbnail /* Variable imgSrc con valor de imagenes[thumbnail] definida en Contactos */
 
   const ultimoMensaje= mensajes[mensajes.length - 1] /* Ultimo mensaje en el array mensajeID */

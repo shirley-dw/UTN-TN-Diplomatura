@@ -21,7 +21,6 @@ const ChatScreen = (contactoID) => {
         <>
             <ChatHeaderInfo />
             <div>
-                {/* <img src={Pantalla} alt="" className='pantalla' /> */}
                 <div className='chat'> {/* Se utiliza para mostrar constel encabezado de la pantalla de chat */}
                     <div className='ChatScreen'>
                         <ListaMensajes contactoID={contactoID} mensaje={mensajes[mensajes.length - 1]}  />

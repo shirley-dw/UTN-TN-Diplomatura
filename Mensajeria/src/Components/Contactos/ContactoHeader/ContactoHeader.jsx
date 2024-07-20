@@ -1,8 +1,9 @@
 import React, { useState } from 'react'/* Importo react + useState */
-import { CiCamera } from 'react-icons/ci'/* Importo icono camara */
-import { BsThreeDotsVertical } from 'react-icons/bs'/* Import icons */
-import { IoMdSearch } from 'react-icons/io'/* Import icons */
-import './ContactoHeader.css';/* Import css */
+import { CiCamera } from 'react-icons/ci'
+import { BsThreeDotsVertical } from 'react-icons/bs'
+import { IoMdSearch } from 'react-icons/io'
+import './ContactoHeader.css';
+import { SiWhatsapp } from "react-icons/si";
 import FormBusquedaDeContactos from '../FormBusquedaDeContactos/ContactoForm.jsx'; /* Importo form de busqueda */
 
 
@@ -24,8 +25,10 @@ const ContactoHeader = ({ search, onSearchChange }) => {
           onSearchChange={onSearchChange}
         />
       )}
+      <SiWhatsapp className='logo-icons' />
       <div className='logo'>WhatsApp</div>
       <div className='icons'>
+
         <CiCamera />
         <IoMdSearch onClick={handleSearchClick} />  
         <BsThreeDotsVertical />
