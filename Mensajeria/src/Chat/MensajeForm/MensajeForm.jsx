@@ -9,20 +9,21 @@ import { BsEmojiSmile } from "react-icons/bs";
 
 const MensajeForm = ({submitMensaje}) => { 
     const [mensaje, setMensaje] = useState('')
-    const handleSubmit = (evento) => {
-        evento.preventDefault();
-        submitMensaje(mensaje);
-        setMensaje('');
-        console.log(evento);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setMensaje(e.target.nuevomensaje.value);
+        submitMensaje(e.target.nuevomensaje.value);
+        e.target.reset()
     }
 /* Cuando se envía el formulario, se llama a la función handleSubmit que se definió anteriormente */
     return (
             <form onSubmit={handleSubmit} className="form">
                 <a href="" className='icons-emoji'><BsEmojiSmile /></a>
-                <input className='input-mensaje' type='text' placeholder='Escribe un mensaje'/>
+                <input className='input-mensaje' type='text' name='nuevomensaje' placeholder='Escribe un mensaje'/>
                 <a href="" className='icons-input'><IoCameraOutline /></a>
                 <a href="" className='icons-input'><MdAttachFile /></a>
-                <button className='btn-send'><MdSend /></button>
+                <button type="submit" className='btn-send'><MdSend /></button>
             </form>
      
     )

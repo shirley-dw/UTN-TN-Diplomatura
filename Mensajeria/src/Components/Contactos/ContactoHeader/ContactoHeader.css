@@ -1,7 +1,7 @@
 .contact-header {
     display: flex;
     align-items: center;
-    background-color: #202c33;
+    background-color: #035C55;
     color: white;
     padding: 15px;
     width: 100%;
@@ -36,6 +36,7 @@
     width: 92%;
     margin-top: 0.5rem;
     margin-right: 0;
+    z-index: 2;
   }
   
   .contact-header.search-visible .icons {

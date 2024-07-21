@@ -1,7 +1,7 @@
 [
     {
         "nombre": "Homero",
-        "thumbnail": "homer",
+        "thumbnail": "homer.jpg",
         "ultima_conexion": "ayer",
         "id": 1,
         "mensajes": [
@@ -41,7 +41,7 @@
     },
     {
         "nombre": "Marge",
-        "thumbnail": "marge",
+        "thumbnail": "marge.jpg",
         "ultima_conexion": "ayer",
         "id": 2,
         "mensajes": [
@@ -81,7 +81,7 @@
     },
     {
         "nombre": "Flanders",
-        "thumbnail": "flanders",
+        "thumbnail": "flanders.jpg",
         "ultima_conexion": "hoy",
         "id": 3,
         "mensajes": [
@@ -120,7 +120,7 @@
     },
     {
         "nombre": "Bart",
-        "thumbnail": "bart",
+        "thumbnail": "bart.jpg",
         "ultima_conexion": "hoy",
         "id": 4,
         "mensajes": [
@@ -160,13 +160,13 @@
     },
     {
         "nombre": "Lisa",
-        "thumbnail": "lisa",
+        "thumbnail": "lisa.jpg",
         "ultima_conexion": "Hace 2 days",
         "id": 5,
         "mensajes": [
             {
                 "author": "Lisa",
-                "text": "Debo estudayr para el examen de matematicas y tocar mi saxofon",
+                "text": "Debo estudiar para el examen de matematicas y tocar mi saxofon",
                 "status": "visto",
                 "day": "hoy",
                 "hour": "19:00",
