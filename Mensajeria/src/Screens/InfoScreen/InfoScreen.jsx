@@ -4,7 +4,7 @@ import  ContactScreen from '../ContactScreen/ContactScreen.jsx';
 
 const InfoScreen = () =>{ /* Define componente InfoScreen que devuelve un elemento JSX*/
   return(
-    <div className="InfoScreen">{/* Devuelve el elemento JSX que se renderiza en la pantalla */}
+    <div className="info-screen">{/* Devuelve el elemento JSX que se renderiza en la pantalla */}
       <ContactScreen />{/* Instancia el componente ContactScreen */}
     </div>
   )

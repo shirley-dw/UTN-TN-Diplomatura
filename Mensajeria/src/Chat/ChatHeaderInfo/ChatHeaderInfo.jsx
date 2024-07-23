@@ -17,14 +17,14 @@ const ChatHeaderInfo = () => {
   const { id } = useParams();
   const [contacto, setContacto] = useState(null);
   const [loading, setLoading] = useState(true);
-  
-  
+
+
   useEffect(() => {
     ObtenerContactos()
-    .then((contactos) => {
-      console.log(contactos)
-      const dataContacto = contactos.find((contacto) => contacto.id === Number(id));
-      setContacto(dataContacto);
+      .then((contactos) => {
+        console.log(contactos)
+        const dataContacto = contactos.find((contacto) => contacto.id === Number(id));
+        setContacto(dataContacto);
         setLoading(false);
       })
       .catch((error) => {
@@ -33,35 +33,33 @@ const ChatHeaderInfo = () => {
       });
   }, []);
 
-
   if (loading) {
-   console.log('Cargando')
+    return <div>Cargando...</div>;
   }
-  else
-  {
+  else {
 
-  return (
-    <div className="chat-header-info">
-      <div className="contacto">
-        <Link to="/">
-          <SlArrowLeft className="arrow" />
-        </Link>{
-        contacto && <>
-        <img className="fotoperfil" src={'/Imagenes/'+ contacto.thumbnail} alt="Foto perfil" />
-        <div className="chat-header">
-          <div className="profile-name">{contacto.nombre}</div>
-          <div className="status-text">{contacto.ultima_conexion}</div>
+    return (
+      <div className="chat-header-info">
+        <div className="contact">
+          <Link to="/">
+            <SlArrowLeft className="arrow" />
+          </Link>{
+            contacto && <>
+              <img className="fotoperfil" src={'/Imagenes/' + contacto.thumbnail} alt="Foto perfil" />
+              <div className="chat-header">
+                <div className="profile-name">{contacto.nombre}</div>
+                <div className="status-text">{contacto.ultima_conexion}</div>
+              </div>
+            </>
+          }
         </div>
-        </>
-        }
+        <div className="icons">
+          <GoDeviceCameraVideo />
+          <MdPhone />
+          <IoMenu />
+        </div>
       </div>
-      <div className="icons">
-        <GoDeviceCameraVideo />
-        <MdPhone />
-        <IoMenu />
-      </div>
-    </div>
-  );
-};
+    );
+  };
 }
 export default ChatHeaderInfo;

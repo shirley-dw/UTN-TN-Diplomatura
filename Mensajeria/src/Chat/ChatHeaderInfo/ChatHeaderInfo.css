@@ -16,26 +16,25 @@
 .chat-header-info {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--ColorNav);
     color: white;
     padding: 15px;
     width: 100%;
-    justify-content: space-between; 
     position: fixed;
     top: 0;
     z-index: 1;
     transition: all 0.3s ease;
 }
 
+.options-container {
+  display: flex;
+  align-items: center;
+} 
 .chat-header img {
     border-radius: 50%;
     width: 40px;
     margin-right: 10px;
-}
-
-.chat-header .contact-info {
-    display: flex;
-    flex-direction: column;
 }
 
 .chat-header .contact-info .contact-name {
@@ -51,18 +50,22 @@
 .chat-header .icons {
     display: flex;
     align-items: center;
+  
     gap: 30px;
     width: 40px;
 }
 
 
-.iconos svg {
-    margin-right: 20px; 
-    font-size: 100px;
+.icons svg {
+    cursor: pointer;
+    font-size: 30px;
     color: #e5ddd5; 
+    transition: all 0.3s ease;
+
+   
 }
 
-.contacto{
+.contact{
     display: flex;
     align-items: center;
 }

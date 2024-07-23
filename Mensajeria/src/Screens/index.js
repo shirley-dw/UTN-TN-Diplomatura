@@ -6,9 +6,10 @@ import MensajeForm from '../Chat/MensajeForm/MensajeForm.jsx'
 import ListaContactos from '../Components/Contactos/ListaContactos/ListaContactos.jsx'
 import ContactoFooter from '../Components/Contactos/ContactoFooter/ContactoFooter.jsx'
 import ContactScreen from './ContactScreen/ContactScreen.jsx'
+import ContactInfo from '../Components/Contactos/ContactoInfo/ContactInfo.jsx'
 import InfoScreen from './InfoScreen/InfoScreen.jsx'
 
-export { ChatHeaderInfo, Mensajes , ListaMensajes, MensajeForm, Contacto, ListaContactos, ContactoFooter, ContactScreen, InfoScreen}
+export { ChatHeaderInfo, Mensajes , ListaMensajes, MensajeForm, Contacto, ListaContactos, ContactoFooter, ContactScreen, InfoScreen, ContactInfo }
 
 
 

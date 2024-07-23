@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./Contacto.css";
 
 
+
 /* Componente Contacto le paso props contacto */
 export const Contacto = ({ id, nombre, thumbnail, mensajes }) => {
   /* Desestructuro la props contacto */
