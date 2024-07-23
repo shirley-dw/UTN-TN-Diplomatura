@@ -9,6 +9,7 @@ import { FaRegBell, FaRegBookmark } from "react-icons/fa6";
 import { AiOutlinePicture } from "react-icons/ai";
 import { PiLockLaminatedFill } from "react-icons/pi";
 
+
 const ContactInfo = () => {
     const { contactoid } = useParams([]);
     const [contacto, setContacto] = useState([]);
@@ -27,9 +28,7 @@ const ContactInfo = () => {
                 console.error('Error al obtener contactos:', error);
             });
     }, [contactoid]);
-    const handleProfileClick = () => {
-        navigate(`/contacto/${contactoid}`)
-      };
+    
     const imagenes = '/Imagenes/' + thumbnail;
     return (
         <div className="infoContainer">
@@ -37,7 +36,7 @@ const ContactInfo = () => {
                 <Link to={`/mensajes/${contacto.id}`}>
                     <FaArrowLeft className="arrow" />
                 </Link>
-                <div className="bioInfo"onClick={handleProfileClick}>
+                <div className="bioInfo">
                     <img src={imagenes} alt={contacto.nombre} />
                     <div className="contact-info">
                         <div className="contact-name">{contacto.nombre}</div>

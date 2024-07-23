@@ -13,7 +13,7 @@ function App() {
         <Route path='mensaje/:id' element={<ChatScreen />} />
         <Route path="/contactos" element={<ContactScreen />} />
         <Route path="/mensaje/:id" element={<ChatScreen />} />
-        <Route path="/contactoInfo/:contactoid" element={<InfoScreen />} />
+        <Route path="/contactInfo/:contactoid" element={<InfoScreen />} />
         
       </Routes>
  
