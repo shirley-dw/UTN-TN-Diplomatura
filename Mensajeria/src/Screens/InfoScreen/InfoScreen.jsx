@@ -1,11 +1,11 @@
 import React from 'react';
 import './InfoScreen.css';
-import ContactScreen from '../ContactScreen/ContactScreen.jsx';
+import{ ContactInfo} from '../../Components/Contactos/ContactoInfo/ContactInfo.jsx';
 
 const InfoScreen = ({ contactoid }) => {
   return (
     <div className="info-screen">
-      <ContactScreen contactoid={contactoid} />
+      <ContactInfo contacto={contactoid} />
     </div>
   );
 };

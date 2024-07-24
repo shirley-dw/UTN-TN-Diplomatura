@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from 'react-router-dom'
 import { FaArrowLeft } from "react-icons/fa6";
-import { useNavigate } from 'react-router-dom';
+
 import { MdOutlinePhone, MdOutlineVideocam, MdSearch, MdLock, MdOutlineTimelapse } from "react-icons/md";
-import {ObtenerContactos} from '../../../Fetching/contactosFetching'
+import { ObtenerContactos } from '../../../Fetching/contactosFetching'
 import './ContactInfo.css'
 import { FaRegBell, FaRegBookmark } from "react-icons/fa6";
 import { AiOutlinePicture } from "react-icons/ai";
@@ -13,8 +13,6 @@ import { PiLockLaminatedFill } from "react-icons/pi";
 const ContactInfo = () => {
     const { contactoid } = useParams([]);
     const [contacto, setContacto] = useState([]);
-    const navigate = useNavigate();
-
 
     useEffect(() => {
         ObtenerContactos()
@@ -28,12 +26,12 @@ const ContactInfo = () => {
                 console.error('Error al obtener contactos:', error);
             });
     }, [contactoid]);
-    
+
     const imagenes = '/Imagenes/' + thumbnail;
     return (
         <div className="infoContainer">
             <div className="infoHeader">
-                <Link to={`/mensajes/${contacto.id}`}>
+                <Link to="/">
                     <FaArrowLeft className="arrow" />
                 </Link>
                 <div className="bioInfo">

@@ -26,16 +26,7 @@
     z-index: 1;
     transition: all 0.3s ease;
 }
-.chat-header-info .info {
-    margin-right: 10px; 
-    font-size: 20px;
-    color: #e5ddd5;
-    font-weight: 900;
-}
-.options-container {
-  display: flex;
-  align-items: center;
-} 
+
 .chat-header img {
     border-radius: 50%;
     width: 40px;
@@ -52,21 +43,18 @@
     color: #e5ddd5;
 }
 
-.chat-header .icons {
+ .icons {
     display: flex;
     align-items: center;
-  
-    gap: 30px;
-    width: 40px;
-}
+    gap: 15px;
 
+}
 
 .icons svg {
     cursor: pointer;
     font-size: 30px;
     color: #e5ddd5; 
     transition: all 0.3s ease;
-
    
 }
 
@@ -82,8 +70,6 @@
     font-weight: 900;
 }
 
-
-
-.fotoperfil{
+.profile{
     height: 30px;
 }
