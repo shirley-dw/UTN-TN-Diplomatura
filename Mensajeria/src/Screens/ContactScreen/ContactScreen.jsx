@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import './ContactScreen.css'
 /* import { ContactoFooter, ContactoHeader, ListaContactos } from '../../components/Contactos/Contactos.jsx'; */
-/* import { ContactoHeader } from '../../Components/Contactos/ContactoHeader/ContactoHeader.jsx'
- */import  ListaContactos  from '../../Components/Contactos/ListaContactos/ListaContactos.jsx'
+/* import { ContactoHeader } from '../../Components/Contactos/ContactoHeader/ContactoHeader.jsx'*/
+import  ListaContactos  from '../../Components/Contactos/ListaContactos/ListaContactos.jsx'
 import  ContactoFooter from '../../Components/Contactos/ContactoFooter/ContactoFooter.jsx'
 import ContactoHeader from '../../Components/Contactos/ContactoHeader/ContactoHeader.jsx';
-
-
 
 
 const ContactScreen = () => { /* Función que devuelve JSX */

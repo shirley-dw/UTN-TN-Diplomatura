@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import { ChatHeaderInfo, ListaMensajes, MensajeForm } from '../index.js' /* Importa tres componentes desde el archivo */
+import React, { useState} from "react";
+import { ChatHeaderInfo, ListaMensajes, MensajeForm, InfoScreen } from '../index.js' /* Importa tres componentes desde el archivo */
 import './ChatScreen.css' /* Importa el arhivo ChatScreen.css */
 
-const ChatScreen = (contactoID) => {
+const ChatScreen = ({ contactoID }) => {
     const [mensajes, setMensajes] = useState([]); /* Estado inicial de los mensajes*/
 
+
+    
     /* Define una función addMensaje que se usa para agregar un nuevo mensaje al estado mensajes. La función toma un parámetro mensajeNuevo que es el texto del nuevo mensaje. La función utiliza la función setMensajes para actualizar el estado mensajes agregando un nuevo objeto que representa el nuevo mensaje. */
     const addMensaje = (mensajeNuevo) => {
         const msjNuevo = {
@@ -21,11 +23,12 @@ const ChatScreen = (contactoID) => {
         <>
             <ChatHeaderInfo />
             <div>
-                <div className='chat'> {/* Se utiliza para mostrar constel encabezado de la pantalla de chat */}
+                <div className='chat'> {/* Se utiliza para mostrar el encabezado de la pantalla de chat */}
                     <div className='ChatScreen'>
                         <ListaMensajes contactoID={contactoID} mensaje={mensajes[mensajes.length - 1]}  />
                     </div>
                     <MensajeForm submitMensaje={addMensaje} /> 
+                    <InfoScreen contactoID={contactoID} />
                 </div>
             </div>
         </>

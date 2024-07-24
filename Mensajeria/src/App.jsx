@@ -9,7 +9,7 @@ function App() {
     <Routes>
       <Route path="/" element={<ContactScreen />} />
       <Route path="/mensaje/:id" element={<ChatScreen />} />
-      <Route path="/contactInfo/:id" element={<InfoScreen />} />
+      <Route path="/contactInfo/:contactoID" element={<InfoScreen />} />
     </Routes>
   );
 }

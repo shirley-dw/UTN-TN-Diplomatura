@@ -1,23 +1,24 @@
-import React, { useState, useEffect } from "react";
+/* Importo librerias */
+import React, { useState, useEffect} from "react";
 import { useParams, Link } from 'react-router-dom'
 import { FaArrowLeft } from "react-icons/fa6";
-
-import { MdOutlinePhone, MdOutlineVideocam, MdSearch, MdLock, MdOutlineTimelapse } from "react-icons/md";
-import { ObtenerContactos } from '../../../Fetching/contactosFetching'
-import './ContactInfo.css'
 import { FaRegBell, FaRegBookmark } from "react-icons/fa6";
 import { AiOutlinePicture } from "react-icons/ai";
 import { PiLockLaminatedFill } from "react-icons/pi";
-
+import { MdOutlinePhone, MdOutlineVideocam, MdSearch, MdLock, MdOutlineTimelapse } from "react-icons/md";
+/* Fetching */
+import { ObtenerContactos } from '../../../Fetching/contactosFetching'
+/* Estilos */
+import './ContactInfo.css'
 
 const ContactInfo = () => {
-    const { contactoid } = useParams([]);
+    const { contactoID } = useParams([]);
     const [contacto, setContacto] = useState([]);
 
     useEffect(() => {
         ObtenerContactos()
             .then(data => {
-                const contactoEncontrado = data.find(contacto => contacto.id === Number(contactoid));
+                const contactoEncontrado = data.find(contacto => contacto.id === Number(contactoID));
                 if (contactoEncontrado) {
                     setContacto(contactoEncontrado);
                 }
@@ -25,9 +26,9 @@ const ContactInfo = () => {
             .catch(error => {
                 console.error('Error al obtener contactos:', error);
             });
-    }, [contactoid]);
+    }, [contactoID]);
 
-    const imagenes = '/Imagenes/' + thumbnail;
+    const imagenes = '/Imagenes/' + contacto.thumbnail;
     return (
         <div className="infoContainer">
             <div className="infoHeader">
